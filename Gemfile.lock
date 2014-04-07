@@ -66,9 +66,12 @@ GEM
     mini_portile (0.5.3)
     minitest (4.7.5)
     multi_json (1.9.2)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     nokogiri (1.6.1-x86-mingw32)
       mini_portile (~> 0.5.0)
     nori (2.3.0)
+    options (2.3.2)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -107,6 +110,9 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    signed_xml (1.0.1)
+      nokogiri (~> 1.5)
+      options
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -151,6 +157,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   savon (~> 2.0)
   sdoc
+  signed_xml
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)

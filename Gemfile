@@ -35,6 +35,8 @@ gem 'nokogiri'
 
 gem 'savon', '~> 2.0'
 
+gem 'signed_xml'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
