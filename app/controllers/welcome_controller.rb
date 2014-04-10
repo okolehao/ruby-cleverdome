@@ -2,7 +2,7 @@ require 'ruby-cleverdome'
 
 class WelcomeController < ApplicationController
 	def index
-		client = RubyCleverdome::Client.new(
+		client = RubyCleverdome.new(
 			'http://sandbox.cleverdome.com/CDSSOService/SSOService.svc/SSO',
 			'http://sandbox.cleverdome.com/CDWidgets/Services/Widgets.svc?wsdl'
 			)
