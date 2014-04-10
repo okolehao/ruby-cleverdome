@@ -3,8 +3,7 @@ require 'savon'
 require 'uuid'
 require 'signed_xml'
 
-module RubyCleverdome
-	class Client
+class RubyCleverdome
 		def initialize(sso_endpoint, widgets_wsdl)
 			@sso_client = Savon.client(
 	  			endpoint: sso_endpoint,
@@ -111,6 +110,10 @@ module RubyCleverdome
 	  		@sso_client.call( 'GetSSO', soap_action: 'urn:up-us:sso-service:service:v1/ISSOService/GetSSO', xml: req ).to_xml
 	  	end
 
+		def self.justin
+			puts "Hey Justin this worked"
+		end
+
 	  	def check_resp(resp_doc)
 	  		status = resp_doc.xpath('//Status//StatusCode')[0]['Value']
 
@@ -120,5 +123,4 @@ module RubyCleverdome
 	  	end
 
 		private :create_request, :sign_request, :saml_call, :check_resp
-	end
 end
